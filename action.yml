@@ -6,7 +6,7 @@ inputs:
     default : "1"
 outputs:
   num_squared : 
-  value : ${{steps.get-square.outputs.num_squared}}
+    value : ${{steps.get-square.outputs.num_squared}}
 runs:
   using : 'composite' #복합적이다.
   steps : 
