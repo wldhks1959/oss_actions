@@ -1,4 +1,4 @@
-name : 'Custom Github Action'
+name:'Custom Github Action'
 description : 'takes number and return the squared number'
 inputs:
   num:
@@ -10,18 +10,18 @@ outputs:
 runs:
   using : 'composite' #복합적이다.
   steps : 
-    -name : Install python
-     uses : actions/setup-python@v4
-     with : 
-       python-version : '3.10'
-    -name : Install dependencies
-     run : pip install -r requirements.txt
-     shell : bash
-    -name : Pass inputs to shell
-     run :
-       echo "Input_NUM=${{inputs.num}}">> $GITHUB_ENV
-     shell : bash 
-    -name : fetch the number' square
-     id : get-square
-     run : python src/get_num_square.py
-     shell : bash
+    - name : Install python
+      uses : actions/setup-python@v4
+      with : 
+        python-version : '3.10'
+    - name : Install dependencies
+      run : pip install -r requirements.txt
+      shell : bash
+    - name : Pass inputs to shell
+      run :
+        echo "Input_NUM=${{inputs.num}}">> $GITHUB_ENV
+      shell : bash 
+    - name : fetch the number' square
+      id : get-square
+      run : python src/get_num_square.py
+      shell : bash
