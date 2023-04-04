@@ -8,4 +8,5 @@ if num:
         exit()
 else:
     num = 1
+    
 print(f"::set-output name=num_squared::{num**2}")
