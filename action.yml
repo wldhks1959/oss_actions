@@ -1,5 +1,6 @@
 name:'Custom Github Action'
 description : 'takes number and return the squared number'
+on: push
 inputs:
   num:
     required: true
