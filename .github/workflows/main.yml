@@ -1,5 +1,5 @@
 name: Test Action 
-on: [push]
+on: push
 
 jobs:
   get-num-square:
