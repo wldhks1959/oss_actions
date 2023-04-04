@@ -10,8 +10,8 @@ jobs :
      uses : action/checkout@v2
     -name : fetch num squared 
       id : get_square
-      uses : ./
+      uses : action/checkout@v2
       with : 
         num: 11
-      - name : printthe square
+      - name : print the square
         run : echo "${{steps.get_square.outpus.num_squared}}"
