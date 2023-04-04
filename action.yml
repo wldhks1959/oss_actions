@@ -6,7 +6,7 @@ inputs:
     default: "1"
 outputs:
   num_squared : 
-    value: ${{steps.get-square.outputs.num_squared}}
+    value: ${{ steps.get-square.outputs.num_squared }}
 runs:
   using: 'composite' #복합적이다.
   steps: 
@@ -18,8 +18,8 @@ runs:
       run: pip install -r requirements.txt
       shell: bash
     - name: Pass inputs to shell
-      run: 
-        echo "Input_NUM=${{inputs.num}}">> $GITHUB_ENV
+      run: |
+        echo "Input_NUM=${{ inputs.num }}" >> $GITHUB_ENV
       shell: bash 
     - name: fetch the number' square
       id: get-square
